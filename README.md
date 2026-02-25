@@ -6,57 +6,57 @@
   <img src="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/logo.svg?raw=true" width="60%" alt="DeepSeek-V3" />
 </div>
 <hr>
-<div align="center" style="line-height: 1;">
-  <a href="https://www.deepseek.com/"><img alt="Homepage"
-    src="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/badge.svg?raw=true"/></a>
-  <a href="https://chat.deepseek.com/"><img alt="Chat"
-    src="https://img.shields.io/badge/🤖%20Chat-DeepSeek%20V3-536af5?color=536af5&logoColor=white"/></a>
-  <a href="https://huggingface.co/deepseek-ai"><img alt="Hugging Face"
-    src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-DeepSeek%20AI-ffc107?color=ffc107&logoColor=white"/></a>
-  <br>
-  <a href="https://discord.gg/Tc7c45Zzu5"><img alt="Discord"
-    src="https://img.shields.io/badge/Discord-DeepSeek%20AI-7289da?logo=discord&logoColor=white&color=7289da"/></a>
-  <a href="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/qr.jpeg?raw=true"><img alt="Wechat"
-    src="https://img.shields.io/badge/WeChat-DeepSeek%20AI-brightgreen?logo=wechat&logoColor=white"/></a>
-  <a href="https://twitter.com/deepseek_ai"><img alt="Twitter Follow"
-    src="https://img.shields.io/badge/Twitter-deepseek_ai-white?logo=x&logoColor=white"/></a>
-  <br>
-  <a href="https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-CODE"><img alt="Code License"
-    src="https://img.shields.io/badge/Code_License-MIT-f5de53?&color=f5de53"/></a>
-  <a href="https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL"><img alt="Model License"
-    src="https://img.shields.io/badge/Model_License-Model_Agreement-f5de53?&color=f5de53"/></a>
-  <br>
-  <a href="https://arxiv.org/pdf/2412.19437"><b>Paper Link</b>👁️</a>
+
+<div align="center">
+  <h3>Personal Fork by Axel Sundqvist</h3>
+  <p>
+    <a href="https://github.com/deepseek-ai/DeepSeek-V3">Upstream Repository</a> · 
+    <a href="https://arxiv.org/pdf/2412.19437">Paper</a> · 
+    <a href="https://huggingface.co/deepseek-ai">Hugging Face</a>
+  </p>
+  <p>
+    <a href="https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-CODE"><img alt="Code License"
+      src="https://img.shields.io/badge/Code_License-MIT-f5de53?&color=f5de53"/></a>
+    <a href="https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL"><img alt="Model License"
+      src="https://img.shields.io/badge/Model_License-Model_Agreement-f5de53?&color=f5de53"/></a>
+  </p>
 </div>
+
+> **Note:** This is a personal fork maintained by Axel Sundqvist for experimentation and learning purposes. For the official project, please visit the [upstream DeepSeek-V3 repository](https://github.com/deepseek-ai/DeepSeek-V3).
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Model Summary](#2-model-summary)
-3. [Model Downloads](#3-model-downloads)
-4. [Evaluation Results](#4-evaluation-results)
-5. [Chat Website & API Platform](#5-chat-website--api-platform)
+1. [About This Fork](#1-about-this-fork)
+2. [Introduction](#2-introduction)
+3. [Model Summary](#3-model-summary)
+4. [Model Downloads](#4-model-downloads)
+5. [Evaluation Results](#5-evaluation-results)
 6. [How to Run Locally](#6-how-to-run-locally)
 7. [License](#7-license)
 8. [Citation](#8-citation)
 9. [Contact](#9-contact)
 
+## 1. About This Fork
 
-## 1. Introduction
+This is a personal fork of [DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) by **Axel Sundqvist**. The purpose of this fork is to explore the DeepSeek-V3 architecture, experiment with the inference code, and learn from the implementation.
 
-We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. 
+**Changes from upstream:**
+- *None yet — tracking upstream for now.*
+
+## 2. Introduction
+
+DeepSeek-V3 is a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. 
 To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2. 
 Furthermore, DeepSeek-V3 pioneers an auxiliary-loss-free strategy for load balancing and sets a multi-token prediction training objective for stronger performance. 
-We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. 
+It was pre-trained on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. 
 Comprehensive evaluations reveal that DeepSeek-V3 outperforms other open-source models and achieves performance comparable to leading closed-source models.
 Despite its excellent performance, DeepSeek-V3 requires only 2.788M H800 GPU hours for its full training.
-In addition, its training process is remarkably stable. 
-Throughout the entire training process, we did not experience any irrecoverable loss spikes or perform any rollbacks. 
+
 <p align="center">
   <img width="80%" src="figures/benchmark.png">
 </p>
 
-## 2. Model Summary
+## 3. Model Summary
 
 ---
 
@@ -84,7 +84,7 @@ Throughout the entire training process, we did not experience any irrecoverable 
 ---
 
 
-## 3. Model Downloads
+## 4. Model Downloads
 
 <div align="center">
 
@@ -102,7 +102,7 @@ To ensure optimal performance and flexibility, we have partnered with open-sourc
 
 For developers looking to dive deeper, we recommend exploring [README_WEIGHTS.md](./README_WEIGHTS.md) for details on the Main Model weights and the Multi-Token Prediction (MTP) Modules. Please note that MTP support is currently under active development within the community, and we welcome your contributions and feedback.
 
-## 4. Evaluation Results
+## 5. Evaluation Results
 ### Base Model
 #### Standard Benchmarks
 
@@ -219,11 +219,6 @@ Evaluation results on the ``Needle In A Haystack`` (NIAH) tests.  DeepSeek-V3 pe
 > English open-ended conversation evaluations. For AlpacaEval 2.0, we use the length-controlled win rate as the metric.
 
 
-## 5. Chat Website & API Platform
-You can chat with DeepSeek-V3 on DeepSeek's official website: [chat.deepseek.com](https://chat.deepseek.com/sign_in)
-
-We also provide OpenAI-Compatible API at DeepSeek Platform: [platform.deepseek.com](https://platform.deepseek.com/)
-
 ## 6. How to Run Locally
 
 DeepSeek-V3 can be deployed locally using the following hardware and open-source community software:
@@ -265,10 +260,10 @@ safetensors==0.4.5
 ```
 #### Model Weights & Demo Code Preparation
 
-First, clone our DeepSeek-V3 GitHub repository:
+Clone this fork:
 
 ```shell
-git clone https://github.com/deepseek-ai/DeepSeek-V3.git
+git clone https://github.com/axelsundqvist/DeepSeek-V3.git
 ```
 
 Navigate to the `inference` folder and install dependencies listed in `requirements.txt`. Easiest way is to use a package manager like `conda` or `uv` to create a new virtual environment and install the dependencies.
@@ -358,4 +353,7 @@ This code repository is licensed under [the MIT License](LICENSE-CODE). The use 
 ```
 
 ## 9. Contact
-If you have any questions, please raise an issue or contact us at [service@deepseek.com](service@deepseek.com).
+
+**Fork maintainer:** Axel Sundqvist — feel free to open an issue on this repository.
+
+**Upstream project:** For questions about the original DeepSeek-V3, please visit the [official repository](https://github.com/deepseek-ai/DeepSeek-V3) or contact [service@deepseek.com](mailto:service@deepseek.com).
